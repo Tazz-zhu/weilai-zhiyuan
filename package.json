@@ -1,7 +1,7 @@
 {
   "name": "weilai-zhiyuan",
   "version": "2.0.0",
-  "description": "未来致远 · 职业认知启蒙 + 生涯规划陪伴 + 人生努力记录（三位一体成长平台）",
+  "description": "未来致远 · 你的人生，自己导航：职业认知 + 生涯规划 + 人生记录 + 人生模拟舱（平行人生）。零外部依赖 Node.js + SQLite，开箱即用。",
   "type": "module",
   "main": "server.js",
   "scripts": {
