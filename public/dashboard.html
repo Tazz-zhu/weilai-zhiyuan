@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人生数据看板 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div class="section-head page-hero">
+        <div>
+          <div class="section-title">📊 人生数据看板</div>
+          <div class="section-sub">你的"人生仪表盘"：技能值、经验值、幸福度、成长速度</div>
+        </div>
+        <button class="btn btn-soft btn-sm" id="editProfileBtn">✏️ 完善个人资料</button>
+      </div>
+      <div id="dashBody">
+        <div class="skeleton-grid mb-24">
+          <div class="skeleton-card"><div class="sk-line short"></div><div class="sk-line"></div><div class="sk-line tiny"></div></div>
+          <div class="skeleton-card"><div class="sk-line short"></div><div class="sk-line"></div><div class="sk-line tiny"></div></div>
+          <div class="skeleton-card"><div class="sk-line short"></div><div class="sk-line"></div><div class="sk-line tiny"></div></div>
+        </div>
+        <div class="skeleton-card"><div class="sk-line short"></div><div class="sk-line"></div><div class="sk-line" style="width:70%"></div></div>
+      </div>
+    </div>
+  </main>
+  <div class="modal-mask" id="profileModal">
+    <div class="modal">
+      <div class="modal-head"><h3>✏️ 完善个人资料</h3><button class="modal-close" data-close="profileModal">✕</button></div>
+      <div class="modal-body">
+        <div class="field"><label>昵称</label><input class="input" id="pfNick"></div>
+        <div class="grid grid-2" style="gap:14px">
+          <div class="field"><label>当前身份</label><select class="select" id="pfEdu">
+            <option value="高中">高中生</option><option value="大学">大学生</option><option value="职场新人">职场新人</option><option value="职场进阶">职场进阶</option><option value="转型期">转型期</option><option value="终身学习">终身学习</option>
+          </select></div>
+          <div class="field"><label>所在城市</label><input class="input" id="pfCity" placeholder="如：杭州"></div>
+        </div>
+        <div class="field"><label>我的目标方向</label><input class="input" id="pfTarget" placeholder="如：AI产品经理"></div>
+        <div class="field"><label>自我介绍</label><textarea class="textarea" id="pfBio"></textarea></div>
+        <button class="btn btn-primary btn-block btn-lg" id="pfSubmit">保存</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

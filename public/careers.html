@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>职业认知馆 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div class="section-head page-hero">
+        <div>
+          <span class="eyebrow">Career museum</span>
+          <div class="section-title">👀 职业认知馆</div>
+          <div class="section-sub" id="subTitle">先选一个行业，再看这个行业里的真实职业</div>
+        </div>
+        <div class="flex">
+          <input class="input" id="searchInput" placeholder="🔍 直接搜索职业 / 技能…" style="width:260px">
+        </div>
+      </div>
+
+      <div class="breadcrumb hidden" id="breadcrumb">
+        <a href="careers.html" class="bc-link">🏠 全部行业</a>
+        <span class="bc-sep">›</span>
+        <span class="bc-current" id="bcCurrent"></span>
+        <button class="btn btn-ghost btn-sm" id="backBtn" style="margin-left:auto">← 返回行业列表</button>
+      </div>
+
+      <!-- 第一级：行业 -->
+      <div id="industryGrid" class="grid grid-3"></div>
+
+      <!-- 第二级：职业 -->
+      <div id="jobGrid" class="grid grid-4 hidden"></div>
+      <div class="empty hidden" id="emptyBox">
+        <div class="ic">🔍</div><h4>没有找到相关职业</h4><p>换个行业或关键词试试吧</p>
+        <div class="empty-action"><a class="btn btn-soft btn-sm" href="careers.html">🏠 回到全部行业</a></div>
+      </div>
+      <div class="text-center mt-24">
+        <button class="btn btn-ghost" id="loadMoreBtn" style="display:none">加载更多</button>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="js/careers.js"></script>
+</body>
+</html>

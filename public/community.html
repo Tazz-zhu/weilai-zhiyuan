@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>同路人社区 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div class="section-head page-hero">
+        <div>
+          <span class="eyebrow">Community</span>
+          <div class="section-title">💬 同路人社区</div>
+          <div class="section-sub" id="subTitle">和目标相同的人一起成长，迷茫不是你的错</div>
+        </div>
+        <div class="flex" style="gap:10px">
+          <a class="btn btn-soft btn-sm" href="mentors.html">🧑‍🏫 导师咨询</a>
+          <button class="btn btn-primary btn-sm" id="newPostBtn">✍️ 发帖</button>
+        </div>
+      </div>
+
+      <!-- 今日话题 -->
+      <div class="card mb-16 hidden" id="topicCard" style="padding:18px 22px;background:linear-gradient(120deg,#fff1e6,#e6f4f9);border:0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
+        <div class="flex" style="gap:12px">
+          <span style="font-size:28px">💬</span>
+          <div><b style="color:var(--deep);font-size:15px" id="topicText"></b><p class="muted" style="font-size:12.5px;margin-top:2px" id="topicHint"></p></div>
+        </div>
+        <button class="btn btn-primary btn-sm" id="topicJoin">去参与</button>
+      </div>
+
+      <!-- 模式切换 -->
+      <div class="tab-bar" id="modeBar">
+        <button class="tab-btn orange active" data-mode="all">💬 全部讨论</button>
+        <button class="tab-btn" data-mode="circles">🏛️ 职业圈子</button>
+      </div>
+
+      <!-- 全部讨论模式 -->
+      <div id="allMode">
+        <div class="tab-bar" id="groupBar">
+          <button class="tab-btn active" data-g="all">全部</button>
+          <button class="tab-btn" data-g="升学规划">升学规划</button>
+          <button class="tab-btn" data-g="职业探索">职业探索</button>
+          <button class="tab-btn" data-g="生涯困惑">生涯困惑</button>
+          <button class="tab-btn" data-g="考研留学">考研留学</button>
+          <button class="tab-btn" data-g="职场成长">职场成长</button>
+          <button class="tab-btn" data-g="学习打卡">学习打卡</button>
+          <button class="tab-btn orange" data-g="hot">🔥 热门</button>
+          <button class="tab-btn" data-g="following">❤️ 我的关注</button>
+        </div>
+        <div id="postList" style="display:flex;flex-direction:column;gap:16px"></div>
+      </div>
+
+      <!-- 职业圈子模式 -->
+      <div id="circlesMode" class="hidden">
+        <div id="circleBreadcrumb" class="breadcrumb hidden">
+          <a href="javascript:void(0)" class="bc-link" id="bcIndustries">🏠 全部行业</a>
+          <span class="bc-sep" id="bcSep1">›</span>
+          <span class="bc-current" id="bcIndustry"></span>
+          <span class="bc-sep" id="bcSep2">›</span>
+          <span class="bc-current" id="bcCareer" style="color:var(--primary-strong)"></span>
+          <button class="btn btn-ghost btn-sm" id="circleBackBtn" style="margin-left:auto">← 返回</button>
+        </div>
+        <div id="industryGrid" class="grid grid-4"></div>
+        <div id="careerGrid" class="grid grid-3 hidden"></div>
+        <div id="circleDetail" class="hidden"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 帖子详情 -->
+  <div class="modal-mask" id="postModal">
+    <div class="modal wide">
+      <div class="modal-head"><h3>💬 帖子详情</h3><button class="modal-close" data-close="postModal">✕</button></div>
+      <div class="modal-body" id="postBody"></div>
+    </div>
+  </div>
+
+  <!-- 发帖 -->
+  <div class="modal-mask" id="composeModal">
+    <div class="modal">
+      <div class="modal-head"><h3>✍️ 发帖</h3><button class="modal-close" data-close="composeModal">✕</button></div>
+      <div class="modal-body">
+        <div class="field"><label>发布到</label>
+          <select class="select" id="cpTarget">
+            <option value="general">🌐 综合讨论（按板块）</option>
+            <optgroup label="职业圈子">
+              <option value="">— 请选择职业圈子 —</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="field" id="cpGroupWrap"><label>板块</label>
+          <select class="select" id="cpGroup">
+            <option>升学规划</option><option>职业探索</option><option>生涯困惑</option><option>考研留学</option><option>职场成长</option><option>学习打卡</option>
+          </select></div>
+        <div class="field"><label>类型</label>
+          <div class="chip-wrap">
+            <button type="button" class="sel-chip on" data-tp="share">✨ 分享</button>
+            <button type="button" class="sel-chip" data-tp="ask">🙋 求助</button>
+            <button type="button" class="sel-chip" data-tp="checkin">📝 打卡</button>
+          </div>
+        </div>
+        <div class="field"><label>标题</label><input class="input" id="cpTitle" placeholder="用一句话说清你的问题"></div>
+        <div class="field"><label>内容</label><textarea class="textarea" id="cpContent" style="min-height:120px" placeholder="详细描述你的处境、困惑或经验…"></textarea></div>
+        <div class="field">
+          <label>图片 / 视频（选填 · 就像发朋友圈）</label>
+          <input type="file" id="cpMedia" accept="image/*,video/*" multiple hidden>
+          <div class="media-preview" id="mediaPreview"></div>
+          <button type="button" class="btn btn-ghost btn-sm mt-8" id="pickMediaBtn">🖼️ 添加图片 / 🎬 视频</button>
+          <p class="form-hint">图片 ≤5MB（最多9个），视频 ≤30MB · 仅 jpg/png/gif/webp/mp4/webm</p>
+        </div>
+        <button class="btn btn-primary btn-block btn-lg" id="cpSubmit">发 布</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/community.js"></script>
+</body>
+</html>

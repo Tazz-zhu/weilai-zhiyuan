@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>未来致远 · 分享卡1 品牌</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body {
+      width: 1080px; height: 1350px; overflow: hidden;
+      font-family: var(--font); color: #fff;
+      background:
+        radial-gradient(900px 480px at 85% -10%, rgba(255,140,66,.5), transparent 60%),
+        radial-gradient(700px 460px at 0% 110%, rgba(74,163,194,.42), transparent 60%),
+        linear-gradient(135deg, #101a33 0%, #1f2c52 50%, #2a3a66 100%);
+      position: relative;
+    }
+    body::before {
+      content: ""; position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,.055) 1px, transparent 1.6px);
+      background-size: 30px 30px;
+      -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 35%, #000 45%, transparent 100%);
+      mask-image: radial-gradient(ellipse 90% 80% at 50% 35%, #000 45%, transparent 100%);
+    }
+    .wrap { position: relative; z-index: 2; padding: 60px 72px 0; height: 1350px; box-sizing: border-box; display: flex; flex-direction: column; }
+    .brand { display: flex; align-items: center; gap: 16px; }
+    .brand-logo { width: 58px; height: 58px; border-radius: 18px; font-size: 30px; }
+    .brand-name { font-size: 30px; font-weight: 900; letter-spacing: 2px; }
+    .brand-name small { font-size: 15px; letter-spacing: 5px; color: rgba(255,255,255,.55); font-weight: 600; }
+    .illus { flex: 1; display: flex; align-items: center; justify-content: center; margin: 6px 0 0; }
+    .illus svg { width: 100%; max-width: 700px; filter: drop-shadow(0 30px 60px rgba(0,0,0,.35)); }
+    .title { text-align: center; }
+    .title h1 { font-size: 68px; font-weight: 900; line-height: 1.22; letter-spacing: 2px; margin: 0; }
+    .title h1 .hl {
+      background: linear-gradient(120deg, #ffd28a, #ff8c42 60%, #ff6d3d);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      filter: drop-shadow(0 6px 20px rgba(255,140,66,.4));
+    }
+    .title .sub { margin-top: 18px; font-size: 26px; color: rgba(255,255,255,.85); letter-spacing: 8px; font-weight: 600; }
+    .chips { display: flex; flex-wrap: wrap; gap: 13px; justify-content: center; margin-top: 30px; }
+    .chips span {
+      padding: 11px 22px; border-radius: 100px; font-size: 20px; font-weight: 700;
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.25); backdrop-filter: blur(6px);
+    }
+    .foot { text-align: center; margin-top: 34px; padding-bottom: 40px; }
+    .foot .slogan { font-size: 18px; color: rgba(255,255,255,.6); letter-spacing: 4px; }
+    .foot .free { display: inline-block; margin-top: 14px; font-size: 15px; color: #ffd28a; letter-spacing: 2px; background: rgba(255,140,66,.14); border: 1px solid rgba(255,210,138,.35); padding: 8px 20px; border-radius: 100px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <span class="brand-logo">🌅</span>
+      <span class="brand-name">未来致远<small>你的人生，自己导航</small></span>
+    </div>
+    <div class="illus">
+      <svg viewBox="0 0 560 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#101a33"/><stop offset="55%" stop-color="#233158"/><stop offset="100%" stop-color="#3d3a63"/></linearGradient>
+          <radialGradient id="sunG" cx="0.5" cy="0.5" r="0.5"><stop offset="0%" stop-color="#ffd28a" stop-opacity=".95"/><stop offset="45%" stop-color="#ff8c42" stop-opacity=".35"/><stop offset="100%" stop-color="#ff8c42" stop-opacity="0"/></radialGradient>
+          <linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#33446f"/><stop offset="100%" stop-color="#1c2849"/></linearGradient>
+          <linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#26345c"/><stop offset="100%" stop-color="#141d36"/></linearGradient>
+          <linearGradient id="pathG" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#ffd28a"/><stop offset="100%" stop-color="#ff8c42"/></linearGradient>
+          <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6"/></filter>
+        </defs>
+        <rect width="560" height="500" fill="url(#skyG)"/>
+        <g fill="#fff">
+          <circle cx="80" cy="64" r="1.6" opacity=".8"/><circle cx="150" cy="110" r="1.2" opacity=".6"/>
+          <circle cx="230" cy="52" r="1.4" opacity=".7"/><circle cx="320" cy="90" r="1.1" opacity=".5"/>
+          <circle cx="510" cy="70" r="1.5" opacity=".7"/><circle cx="540" cy="150" r="1.2" opacity=".5"/>
+        </g>
+        <circle cx="430" cy="118" r="110" fill="url(#sunG)"/>
+        <circle cx="430" cy="118" r="34" fill="#ffd28a"/>
+        <circle cx="430" cy="118" r="52" fill="none" stroke="#ffd28a" stroke-opacity=".25" stroke-width="2"/>
+        <path d="M0 392 118 244l112 108 96-108 132 148 102-84v192H0z" fill="url(#mtn1)"/>
+        <path d="M0 438 96 340l120 92 116-96 120 92 108-80v152H0z" fill="url(#mtn2)"/>
+        <path d="M48 474C118 448 140 402 196 400s70-44 112-56 78-46 132-84" stroke="url(#pathG)" stroke-width="5" stroke-linecap="round" fill="none" opacity=".95"/>
+        <path d="M48 474C118 448 140 402 196 400s70-44 112-56 78-46 132-84" stroke="#fff" stroke-width="1.5" stroke-dasharray="2 10" stroke-linecap="round" fill="none" opacity=".5"/>
+        <g>
+          <circle cx="48" cy="472" r="10" fill="#ff8c42" filter="url(#soft)" opacity=".8"/><circle cx="48" cy="472" r="7" fill="#fff"/><circle cx="48" cy="472" r="3.5" fill="#f26d1d"/>
+          <text x="48" y="502" text-anchor="middle" fill="#ffd28a" font-size="15" font-weight="800">18岁</text>
+          <circle cx="196" cy="398" r="10" fill="#ff8c42" filter="url(#soft)" opacity=".8"/><circle cx="196" cy="398" r="7" fill="#fff"/><circle cx="196" cy="398" r="3.5" fill="#f26d1d"/>
+          <text x="196" y="384" text-anchor="middle" fill="#ffd28a" font-size="15" font-weight="800">25岁</text>
+          <circle cx="308" cy="342" r="10" fill="#4aa3c2" filter="url(#soft)" opacity=".8"/><circle cx="308" cy="342" r="7" fill="#fff"/><circle cx="308" cy="342" r="3.5" fill="#2f7d97"/>
+          <text x="308" y="328" text-anchor="middle" fill="#9fd8ec" font-size="15" font-weight="800">35岁</text>
+          <circle cx="440" cy="256" r="10" fill="#7c6cf0" filter="url(#soft)" opacity=".8"/><circle cx="440" cy="256" r="7" fill="#fff"/><circle cx="440" cy="256" r="3.5" fill="#5b4bd8"/>
+          <text x="440" y="242" text-anchor="middle" fill="#bdb3ff" font-size="15" font-weight="800">60岁</text>
+        </g>
+        <g><circle cx="52" cy="436" r="8" fill="#ffd28a"/><path d="M34 474c6-12 28-12 36 0z" fill="#ffd28a"/></g>
+        <g transform="translate(96 66)">
+          <circle cx="22" cy="22" r="22" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+          <path d="M22 22 31 13l-4 11-7 2z" fill="#ff8c42"/><circle cx="22" cy="22" r="2.5" fill="#fff"/>
+        </g>
+        <g transform="translate(486 56) rotate(18)"><path d="M0 26 46 0 30 46 22 28z" fill="#ff8c42"/></g>
+      </svg>
+    </div>
+    <div class="title">
+      <h1>分数决定起点，<br><span class="hl">你决定终点。</span></h1>
+      <div class="sub">未 来 致 远</div>
+    </div>
+    <div class="chips">
+      <span>👀 180+ 职业</span><span>🧭 23 大行业</span><span>🎓 65 所高校志愿推荐</span>
+      <span>💬 职业圈子</span><span>📖 人生回忆录</span>
+    </div>
+    <div class="foot">
+      <div class="slogan">职业认知 · 生涯规划 · 人生记录</div>
+      <div class="free">✨ 目前全功能免费开放</div>
+    </div>
+  </div>
+</body>
+</html>

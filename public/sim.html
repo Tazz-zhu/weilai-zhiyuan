@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人生模拟舱 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div class="section-head page-hero">
+        <div>
+          <span class="eyebrow">Parallel Life</span>
+          <div class="section-title">🎮 人生模拟舱</div>
+          <div class="section-sub">亲身体验一段职业人生：从高一到第一份工作。你负责选择，系统负责演算。</div>
+        </div>
+        <button class="btn btn-primary" id="btnNewRun">✨ 开始一段新人生</button>
+      </div>
+
+      <!-- 未登录提示 -->
+      <div class="card mb-16" id="guestBanner" style="padding:16px 22px;background:linear-gradient(120deg,#fff4e0,#f0f7ff);border:0;display:none">
+        <div class="flex-between" style="gap:12px;flex-wrap:wrap">
+          <div class="flex" style="gap:10px;align-items:center">
+            <span style="font-size:26px">👤</span>
+            <div><b style="color:var(--deep)">游客模式</b>
+            <p class="muted" style="font-size:13px">当前以游客身份体验，登录未来致远后存档会自动认领到你的账号。</p></div>
+          </div>
+          <button class="btn btn-deep btn-sm" id="btnLogin">🔑 登录 / 注册</button>
+        </div>
+      </div>
+
+      <!-- 我的平行人生 -->
+      <div class="section-head page-hero">
+        <div>
+          <div class="section-title" style="font-size:22px">📚 我的平行人生</div>
+          <div class="section-sub" style="margin-bottom:0">每一局都是一条独立的人生线，可随时继续或回看结局</div>
+        </div>
+        <span class="tag blue" id="runCount">0 局</span>
+      </div>
+      <div class="grid grid-3" id="runsBox" style="margin-bottom:8px"></div>
+
+      <!-- 可体验路线 -->
+      <div class="section-head page-hero" style="margin-top:26px">
+        <div>
+          <div class="section-title" style="font-size:22px">🧭 选择一条平行人生</div>
+          <div class="section-sub" style="margin-bottom:0">32 条深度模拟路线：8 条人工精修 + 24 条 AI 生成</div>
+        </div>
+      </div>
+      <div class="grid grid-3" id="careerGrid"></div>
+    </div>
+  </main>
+
+  <!-- 报告弹窗容器 -->
+  <div id="reportModal" style="display:none"></div>
+
+  <script type="module" src="js/sim-launcher.js"></script>
+</body>
+</html>

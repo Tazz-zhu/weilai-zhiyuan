@@ -1,0 +1,14 @@
+﻿{
+  "name": "未来致远 · 你的人生，自己导航",
+  "short_name": "未来致远",
+  "description": "职业认知 · 生涯规划 · 人生记录，三位一体成长平台",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f6f4f0",
+  "theme_color": "#ff8c42",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

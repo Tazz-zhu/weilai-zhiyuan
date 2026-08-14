@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>私信 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page" style="padding:20px 0">
+    <div class="container" style="max-width:1080px">
+      <div class="chat-shell">
+        <aside class="chat-list" id="chatList">
+          <div class="chat-list-head">
+            <b>💬 私信</b>
+            <div class="flex" style="gap:6px"><span class="muted" id="chatTotal"></span><button class="btn btn-ghost btn-sm" id="readAllMsg">全部已读</button></div>
+          </div>
+          <div id="convList">
+            <div class="skeleton" style="height:80px;margin:10px;border-radius:12px"></div>
+          </div>
+        </aside>
+        <section class="chat-main" id="chatMain">
+          <div class="chat-empty" id="chatEmpty">
+            <div class="empty-ic" style="margin-bottom:14px">💬</div>
+            <h4 style="color:var(--text-2)">选择一个会话开始聊天</h4>
+            <p class="muted" style="margin:6px 0 14px">在社区帖子点"发消息"，或从通知进入</p>
+            <a class="btn btn-primary btn-sm" href="community.html">去社区找同路人</a>
+          </div>
+          <div class="chat-window hidden" id="chatWindow">
+            <div class="chat-head" id="chatHead"></div>
+            <div class="chat-body" id="chatBody"></div>
+            <div class="chat-input">
+              <input type="file" id="msgImgInput" accept="image/*" hidden>
+              <button class="bell" id="msgImgBtn" title="发送图片" style="border-radius:50%">🖼️</button>
+              <input id="chatMsgInput" placeholder="输入消息…（Enter 发送）" maxlength="500">
+              <button class="btn btn-primary" id="chatSendBtn">发送</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="js/messages.js"></script>
+</body>
+</html>

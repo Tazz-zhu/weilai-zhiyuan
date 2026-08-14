@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>未来致远 · 你的人生，自己导航</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff8c42">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+  <main>
+    <!-- ======== Hero：开始探索入口置顶 + 可交互人生导航插画 ======== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-left">
+          <span class="hero-badge">🧭 职业认知 · 生涯规划 · 人生体验 · 人生记录 四位一体</span>
+          <h1>分数决定起点，<br><span class="hl">你决定终点。</span></h1>
+          <p class="lead">未来致远不是"志愿填报工具"，而是一套可感知、可互动、可沉淀的人生路径探索系统——从18岁到60岁，陪你把每一份努力都变成最珍贵的回忆。</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg btn-shine" href="assessment.html">🚀 开始探索</a>
+            <a class="btn btn-ghost btn-lg" href="careers.html">👀 探索 100+ 职业</a>
+            <a class="btn btn-ghost btn-lg" href="profile.html">🎓 高考志愿推荐</a>
+            <a class="btn btn-deep btn-lg" href="sim.html">🎮 人生模拟舱</a>
+          </div>
+          <div class="hero-stats" id="heroStats">
+            <div class="hs"><div class="hs-num">0</div><div class="hs-label">职业体验</div></div>
+            <div class="hs"><div class="hs-num">0</div><div class="hs-label">专业真相</div></div>
+            <div class="hs"><div class="hs-num">0</div><div class="hs-label">人生剧本</div></div>
+            <div class="hs"><div class="hs-num">0</div><div class="hs-label">行业导师</div></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-illus-wrap">
+            <svg class="hero-illus" viewBox="0 0 560 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="人生导航插画">
+              <defs>
+                <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#101a33"/><stop offset="55%" stop-color="#233158"/><stop offset="100%" stop-color="#3d3a63"/></linearGradient>
+                <radialGradient id="sunG" cx="0.5" cy="0.5" r="0.5"><stop offset="0%" stop-color="#ffd28a" stop-opacity=".95"/><stop offset="45%" stop-color="#ff8c42" stop-opacity=".35"/><stop offset="100%" stop-color="#ff8c42" stop-opacity="0"/></radialGradient>
+                <linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#33446f"/><stop offset="100%" stop-color="#1c2849"/></linearGradient>
+                <linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#26345c"/><stop offset="100%" stop-color="#141d36"/></linearGradient>
+                <linearGradient id="pathG" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#ffd28a"/><stop offset="100%" stop-color="#ff8c42"/></linearGradient>
+                <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6"/></filter>
+              </defs>
+              <rect width="560" height="500" fill="url(#skyG)"/>
+              <g fill="#fff"><circle cx="80" cy="64" r="1.6" opacity=".8"/><circle cx="150" cy="110" r="1.2" opacity=".6"/><circle cx="230" cy="52" r="1.4" opacity=".7"/><circle cx="320" cy="90" r="1.1" opacity=".5"/><circle cx="510" cy="70" r="1.5" opacity=".7"/><circle cx="540" cy="150" r="1.2" opacity=".5"/></g>
+              <circle cx="430" cy="118" r="110" fill="url(#sunG)"/>
+              <circle cx="430" cy="118" r="34" fill="#ffd28a"/>
+              <circle cx="430" cy="118" r="52" fill="none" stroke="#ffd28a" stroke-opacity=".25" stroke-width="2"/>
+              <path d="M0 392 118 244l112 108 96-108 132 148 102-84v192H0z" fill="url(#mtn1)"/>
+              <path d="M0 438 96 340l120 92 116-96 120 92 108-80v152H0z" fill="url(#mtn2)"/>
+              <path d="M48 474C118 448 140 402 196 400s70-44 112-56 78-46 132-84" stroke="url(#pathG)" stroke-width="5" stroke-linecap="round" fill="none" opacity=".95"/>
+              <path d="M48 474C118 448 140 402 196 400s70-44 112-56 78-46 132-84" stroke="#fff" stroke-width="1.5" stroke-dasharray="2 10" stroke-linecap="round" fill="none" opacity=".5"/>
+              <g class="milestone" data-node="18">
+                <circle cx="48" cy="472" r="10" fill="#ff8c42" filter="url(#soft)" opacity=".8"/><circle cx="48" cy="472" r="7" fill="#fff"/><circle cx="48" cy="472" r="3.5" fill="#f26d1d"/><text x="48" y="502" text-anchor="middle" fill="#ffd28a" font-size="15" font-weight="800">18岁</text>
+              </g>
+              <g class="milestone" data-node="25">
+                <circle cx="196" cy="398" r="10" fill="#ff8c42" filter="url(#soft)" opacity=".8"/><circle cx="196" cy="398" r="7" fill="#fff"/><circle cx="196" cy="398" r="3.5" fill="#f26d1d"/><text x="196" y="384" text-anchor="middle" fill="#ffd28a" font-size="15" font-weight="800">25岁</text>
+              </g>
+              <g class="milestone" data-node="35">
+                <circle cx="308" cy="342" r="10" fill="#4aa3c2" filter="url(#soft)" opacity=".8"/><circle cx="308" cy="342" r="7" fill="#fff"/><circle cx="308" cy="342" r="3.5" fill="#2f7d97"/><text x="308" y="328" text-anchor="middle" fill="#9fd8ec" font-size="15" font-weight="800">35岁</text>
+              </g>
+              <g class="milestone" data-node="60">
+                <circle cx="440" cy="256" r="10" fill="#7c6cf0" filter="url(#soft)" opacity=".8"/><circle cx="440" cy="256" r="7" fill="#fff"/><circle cx="440" cy="256" r="3.5" fill="#5b4bd8"/><text x="440" y="242" text-anchor="middle" fill="#bdb3ff" font-size="15" font-weight="800">60岁</text>
+              </g>
+              <g><circle cx="52" cy="436" r="8" fill="#ffd28a"/><path d="M34 474c6-12 28-12 36 0z" fill="#ffd28a"/></g>
+              <g transform="translate(96 66)"><circle cx="22" cy="22" r="22" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/><path d="M22 22 31 13l-4 11-7 2z" fill="#ff8c42"/><circle cx="22" cy="22" r="2.5" fill="#fff"/></g>
+              <g transform="translate(486 56) rotate(18)"><path d="M0 26 46 0 30 46 22 28z" fill="#ff8c42"/></g>
+            </svg>
+            <button class="node-hot nh-18" data-node="18" data-href="assessment.html" aria-label="18岁节点"><span class="nh-tip"><b>18 岁 · 选科选专业</b><small>迷茫？先做四维测评认识自己</small></span></button>
+            <button class="node-hot nh-25" data-node="25" data-href="community.html" aria-label="25岁节点"><span class="nh-tip"><b>25 岁 · 初入职场</b><small>去职业圈子找同路人</small></span></button>
+            <button class="node-hot nh-35" data-node="35" data-href="planner.html" aria-label="35岁节点"><span class="nh-tip"><b>35 岁 · 第二曲线</b><small>生成你的生涯路径</small></span></button>
+            <button class="node-hot nh-60" data-node="60" data-href="memoir.html" aria-label="60岁节点"><span class="nh-tip"><b>60 岁 · 人生下半场</b><small>把人生写成回忆录</small></span></button>
+          </div>
+          <p class="hero-hint">💡 点击插画中的人生节点，看看每个阶段的我们</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== 高考志愿 + 签到（窄条） ======== -->
+    <section class="page" style="padding:20px 0 0">
+      <div class="container">
+        <div class="gaokao-banner fade-up">
+          <div class="flex" style="gap:16px">
+            <span class="gb-ic">🎓</span>
+            <div><b>高考志愿不会填？让 AI 帮你"冲稳保"</b>
+            <p>填入高考成绩、选科与家庭情况，结合你的性格测评，智能推荐志愿与院校。</p></div>
+          </div>
+          <a class="btn btn-primary btn-shine" href="profile.html">🎯 免费智能推荐</a>
+        </div>
+        <div id="personalStrip"></div>
+        <div id="checkinWrap" style="display:none;margin-top:16px">
+          <div class="card" style="padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:linear-gradient(135deg,#fff7ef,#fff)">
+            <div class="flex" style="gap:12px">
+              <div style="font-size:28px">📅</div>
+              <div><b style="color:var(--deep);font-size:15px">连续打卡 <span id="streakNum" style="color:var(--primary-strong)">0</span> 天</b></div>
+            </div>
+            <div class="checkin-strip" id="checkinStrip"></div>
+            <button class="btn btn-primary btn-sm" id="checkinBtn">✅ 今日签到</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== 人生模拟舱（旗舰） ======== -->
+    <section class="page" style="padding-top:22px">
+      <div class="container">
+        <div class="card" style="padding:26px 30px;background:linear-gradient(120deg,#ece9fd,#e6f4f9 55%,#fff1e6);border:0;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+          <div class="flex" style="gap:16px">
+            <span style="font-size:40px">🎮</span>
+            <div>
+              <b style="color:var(--deep);font-size:18px">人生模拟舱 · 活一遍你的目标职业</b>
+              <p class="muted" style="font-size:13.5px;margin-top:5px">从高一到第一份工作：选科、高考、大学、实习、求职全程沉浸体验。32 条职业路线，通关生成平行人生报告。</p>
+            </div>
+          </div>
+          <div class="flex" style="gap:10px;flex-wrap:wrap">
+            <a class="btn btn-deep btn-shine" href="sim.html">🚀 进入模拟舱</a>
+            <a class="btn btn-ghost" href="sim.html?career=c001">⚡ 快速体验产品经理</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== 产品介绍：翻页轮播 ======== -->
+    <section class="page" style="padding-top:22px">
+      <div class="container">
+        <div class="carousel" id="productCarousel">
+          <div class="carousel-head">
+            <div>
+              <span class="eyebrow">Product tour</span>
+              <div class="section-title" id="carouselTitle">认识未来致远</div>
+            </div>
+            <div class="carousel-controls">
+              <button class="car-btn" id="carPrev" aria-label="上一页">←</button>
+              <div class="car-dots" id="carDots"></div>
+              <button class="car-btn" id="carNext" aria-label="下一页">→</button>
+            </div>
+          </div>
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carTrack">
+              <div class="carousel-slide" data-title="01 · 三大核心模块">
+                <div class="slide-inner">
+                  <div class="slide-tip">👀 认知 → 🧭 规划 → 📖 记录，完整闭环</div>
+                  <div class="grid grid-3" style="gap:18px">
+                    <div class="card module-card" onclick="location.href='careers.html'">
+                      <div class="mc-ic" style="background:var(--primary-soft);color:var(--primary-strong)">👀</div>
+                      <h3>职业认知馆</h3>
+                      <p>职业体验库 · 人生剧本库 · 专业真相馆，看见 100 种人生的真实样子。</p>
+                      <div class="mc-tags"><span>一天vlog</span><span>四维雷达</span><span>平行人生</span></div>
+                      <span class="mc-arrow">→</span>
+                    </div>
+                    <div class="card module-card" onclick="location.href='assessment.html'">
+                      <div class="mc-ic" style="background:var(--accent-soft);color:var(--accent-strong)">🧭</div>
+                      <h3>生涯规划师</h3>
+                      <p>兴趣/性格/能力/价值观四维测评，AI 推荐 3-5 条路径并拆解到每一步。</p>
+                      <div class="mc-tags"><span>深度测评</span><span>路径拆解</span><span>Plan B/C</span></div>
+                      <span class="mc-arrow">→</span>
+                    </div>
+                    <div class="card module-card" onclick="location.href='memoir.html'">
+                      <div class="mc-ic" style="background:var(--teal-soft);color:var(--teal)">📖</div>
+                      <h3>人生回忆录</h3>
+                      <p>成长时光轴 · 时光胶囊 · 人生数据看板，让每一份努力都有迹可循。</p>
+                      <div class="mc-tags"><span>时光轴</span><span>给未来的信</span><span>年度报告</span></div>
+                      <span class="mc-arrow">→</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-slide" data-title="02 · 从 18 岁到 60 岁">
+                <div class="slide-inner">
+                  <div class="slide-tip">不是高考定胜负的百米冲刺，而是一场长达数十年的马拉松</div>
+                  <div class="journey-strip" style="box-shadow:none;border:1px solid var(--line)">
+                    <div class="journey-node"><span class="jn-dot">🎓</span><b>18 岁</b><p>选科 · 选专业<br>第一次认识职业世界</p></div>
+                    <div class="journey-line"><span></span></div>
+                    <div class="journey-node"><span class="jn-dot">🚀</span><b>22 岁</b><p>毕业 · 第一份工作<br>从校园走向职场</p></div>
+                    <div class="journey-line"><span></span></div>
+                    <div class="journey-node"><span class="jn-dot">🧭</span><b>30 岁</b><p>找准赛道<br>完成第一次跃迁</p></div>
+                    <div class="journey-line"><span></span></div>
+                    <div class="journey-node"><span class="jn-dot">🌳</span><b>40 岁</b><p>第二曲线<br>成为领域专家</p></div>
+                    <div class="journey-line"><span></span></div>
+                    <div class="journey-node"><span class="jn-dot">🌅</span><b>60 岁</b><p>人生下半场<br>把经历变成作品</p></div>
+                  </div>
+                  <div class="card mt-16" style="padding:18px 24px;background:linear-gradient(120deg,#fff1e6,#ece9fd);border:0;text-align:center">
+                    <b style="font-size:18px;color:var(--deep)">"分数决定起点，你决定终点"</b>
+                    <p class="muted mt-8">未来致远 · 你的人生，自己导航</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-slide" data-title="03 · 为你推荐">
+                <div class="slide-inner">
+                  <div class="slide-tip" id="forYouTip">基于你的测评画像，AI 精选高匹配职业</div>
+                  <div class="grid grid-4" id="hotJobs" style="gap:16px"></div>
+                  <div class="text-center mt-16"><a class="btn btn-soft btn-sm" href="careers.html">查看全部 180+ 职业 →</a></div>
+                </div>
+              </div>
+              <div class="carousel-slide" data-title="04 · 人生剧本 & 同路人">
+                <div class="slide-inner">
+                  <div class="split-grid sg-equal">
+                    <div>
+                      <div class="flex-between mb-8"><b style="color:var(--deep)">🎬 人生剧本库</b><a href="scripts.html" class="muted" style="font-size:12.5px">更多 →</a></div>
+                      <div class="grid grid-2" id="scriptList" style="gap:14px"></div>
+                    </div>
+                    <div>
+                      <div class="flex-between mb-8"><b style="color:var(--deep)">💬 同路人正在聊</b><a href="community.html" class="muted" style="font-size:12.5px">进入社区 →</a></div>
+                      <div class="grid grid-2" id="postList" style="gap:14px"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-slide" data-title="05 · 同路人声音">
+                <div class="slide-inner">
+                  <div class="split-grid sg-chart">
+                    <div id="voiceList" style="display:flex;flex-direction:column;gap:14px"></div>
+                    <div class="faq-list">
+                      <details class="faq-item"><summary><b>测评结果准吗？会决定我的人生吗？</b><span class="faq-arrow">＋</span></summary><p>测评是自我认知工具，只做参考不做定论。你的路径由你决定。</p></details>
+                      <details class="faq-item"><summary><b>要花钱吗？</b><span class="faq-arrow">＋</span></summary><p>目前全部功能免费开放，商业化方案确定后会提前透明公示。</p></details>
+                      <details class="faq-item"><summary><b>迷茫期才开始用，来得及吗？</b><span class="faq-arrow">＋</span></summary><p>人生是长跑不是冲刺，任何年龄开始探索都不晚。</p></details>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== 底部极简 CTA ======== -->
+    <section class="page" style="padding-top:0">
+      <div class="container">
+        <div class="card" style="background:var(--grad-deep);border:0;padding:30px 36px;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;border-radius:24px;position:relative;overflow:hidden">
+          <div style="position:absolute;right:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,140,66,.35),transparent 65%)"></div>
+          <div style="color:#fff;position:relative;z-index:1">
+            <b style="font-size:22px;font-weight:900">你的"人生导航仪 + 成长记录仪"</b>
+            <p style="color:rgba(255,255,255,.7);font-size:14px;margin-top:6px">从 18 岁到 60 岁，陪你把每一份努力都变成最珍贵的回忆。</p>
+          </div>
+          <a class="btn btn-primary btn-lg btn-shine" href="assessment.html" style="position:relative;z-index:1">🚀 开始探索</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>

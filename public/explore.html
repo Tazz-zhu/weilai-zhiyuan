@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>探索 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div class="section-head page-hero">
+        <div>
+          <span class="eyebrow">Explore</span>
+          <div class="section-title">🧭 探索</div>
+          <div class="section-sub">认识职业 · 找到方向 · 填好志愿，从这里开始</div>
+        </div>
+      </div>
+
+      <!-- 三大入口 -->
+      <div class="grid grid-3 mb-16" id="exploreEntries"></div>
+
+      <!-- 按身份引导 -->
+      <div class="card mb-16" style="padding:22px 26px;background:linear-gradient(120deg,#fff1e6,#e6f4f9);border:0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <div class="flex" style="gap:12px">
+          <span style="font-size:32px">🧑‍🎓</span>
+          <div><b style="color:var(--deep);font-size:16px">先告诉我你现在是谁，我带你走</b>
+          <p class="muted mt-8" style="font-size:13px">不同阶段，起点不同</p></div>
+        </div>
+        <div class="flex" style="gap:8px;flex-wrap:wrap">
+          <a class="btn btn-primary btn-sm" href="profile.html">🎓 高中生 · 填志愿</a>
+          <a class="btn btn-deep btn-sm" href="assessment.html">🎒 大学生 · 找方向</a>
+          <a class="btn btn-ghost btn-sm" href="planner.html">💼 职场人 · 求转型</a>
+        </div>
+      </div>
+
+      <!-- 热门职业 -->
+      <div class="section-head page-hero">
+        <div>
+          <div class="section-title" style="font-size:22px">🔥 大家都在看</div>
+          <div class="section-sub" style="margin-bottom:0">热门职业，四维雷达一眼看懂</div>
+        </div>
+        <a class="btn btn-soft btn-sm" href="careers.html">进入职业认知馆 →</a>
+      </div>
+      <div class="grid grid-4" id="hotJobs"></div>
+    </div>
+  </main>
+  <script type="module" src="js/explore.js"></script>
+</body>
+</html>

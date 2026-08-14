@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户主页 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container" style="max-width:860px">
+      <div id="profileHero" style="border-radius:24px;padding:30px;color:#fff;position:relative;overflow:hidden;margin-bottom:18px;background:linear-gradient(135deg,#1a2440,#33446f 60%,#4a3f66)">
+        <div style="position:absolute;right:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,140,66,.4),transparent 65%)"></div>
+        <div class="skeleton" style="height:90px"></div>
+      </div>
+      <div class="split-grid sg-equal">
+        <div class="panel">
+          <div class="panel-head">
+            <div class="panel-title"><span class="panel-ic green">📖</span><div>最近足迹</div></div>
+          </div>
+          <div id="pEvents"><div class="skeleton" style="height:120px"></div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <div class="panel-title"><span class="panel-ic blue">💬</span><div>最近帖子</div></div>
+          </div>
+          <div id="pPosts"><div class="skeleton" style="height:120px"></div></div>
+        </div>
+      </div>
+      <div class="panel mt-16">
+        <div class="panel-head">
+          <div class="panel-title"><span class="panel-ic gold">🏅</span><div>人生徽章</div></div>
+        </div>
+        <div id="pBadges"></div>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="js/user.js"></script>
+</body>
+</html>

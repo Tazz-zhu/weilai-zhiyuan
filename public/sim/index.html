@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人生模拟舱 · 平行人生（高中到第一份工作）</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+  <link rel="stylesheet" href="css/journey.css">
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <div class="brand">🎮 人生模拟舱 <span class="tagline">职业人生 · 高一到第一份工作</span></div>
+      <button id="btnBackPlatform" class="llm-badge" title="保存并返回未来致远平台" style="cursor:pointer">🏠 返回平台</button>
+      <div id="llmBadge" class="llm-badge">🧠 加载中…</div>
+      <div id="timeline" class="timeline"></div>
+      <button id="careerChip" class="career-chip" title="点击更换职业意向"></button>
+      <span id="clock" class="clock">🕐 08:00</span>
+      <div class="actions">
+        <button id="btnAchievements" title="成就与图鉴">🏆</button>
+        <button id="btnFeed" title="手机" class="hidden">📱<span id="feedDot" class="dot hidden"></span></button>
+        <button id="btnLibrary">🗺️ 职业图鉴</button>
+        <button id="btnHelp">❓</button>
+        <button id="btnRestart" title="重新开始">🔄</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <aside id="leftPanel">
+        <div id="questPanel"></div>
+        <div class="panel-title">📇 人物 <span class="sub">点击头像聊天</span></div>
+        <div id="castList"></div>
+      </aside>
+
+      <section id="centerPanel">
+        <div id="questBar"></div>
+        <div id="sceneWrap"></div>
+      </section>
+
+      <aside id="rightPanel">
+        <div id="attrsPanel"></div>
+        <div id="roadmapPanel"></div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- 原神式底部对话框 -->
+  <div id="chatOverlay" class="hidden"></div>
+  <div id="modalRoot"></div>
+
+  <script src="js/avatars.js"></script>
+  <script src="js/path.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/v2/art3d.js"></script>
+  <script src="js/v2/content.js"></script>
+  <script src="js/v2/features-data.js"></script>
+  <script src="js/v2/store.js"></script>
+  <script src="js/v2/features.js"></script>
+  <script src="js/v2/engine.js"></script>
+  <script src="js/v2/dialogue.js"></script>
+  <script src="js/v2/scene.js"></script>
+  <script src="js/v2/ui.js"></script>
+  <script src="js/v2/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div id="myHero" style="border-radius:24px;padding:30px;color:#fff;position:relative;overflow:hidden;margin-bottom:18px;background:linear-gradient(135deg,#1a2440,#33446f 60%,#4a3f66)">
+        <div style="position:absolute;right:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,140,66,.4),transparent 65%)"></div>
+        <div class="skeleton" style="height:90px"></div>
+      </div>
+
+      <div class="my-page">
+        <!-- 我的数据：一行统计卡 -->
+        <div class="grid grid-4 mb-18" id="myStats" style="gap:14px"></div>
+
+        <!-- 新手任务 + 我的测评 -->
+        <div class="my-row wide">
+          <div class="panel">
+            <div class="panel-head">
+              <div class="panel-title"><span class="panel-ic">🚀</span><div>新手成长任务<small>Getting started</small></div></div>
+              <div class="panel-actions"><span class="tag orange" id="taskProgress">0 / 5</span></div>
+            </div>
+            <div id="taskList"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head">
+              <div class="panel-title"><span class="panel-ic purple">🧭</span><div>我的测评</div></div>
+              <div class="panel-actions"><a class="btn btn-soft btn-sm" href="assessment.html">重新测评</a></div>
+            </div>
+            <div id="myAssessments"></div>
+          </div>
+        </div>
+
+        <!-- 我的帖子 + 我的收藏 · 圈子 -->
+        <div class="my-row">
+          <div class="panel">
+            <div class="panel-head">
+              <div class="panel-title"><span class="panel-ic blue">💬</span><div>我的帖子</div></div>
+              <div class="panel-actions"><a class="btn btn-soft btn-sm" href="community.html">去社区 →</a></div>
+            </div>
+            <div id="myPosts"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head">
+              <div class="panel-title"><span class="panel-ic gold">⭐</span><div>我的收藏 · 圈子</div></div>
+              <div class="panel-actions"><a class="btn btn-soft btn-sm" href="careers.html">逛职业库 →</a></div>
+            </div>
+            <div id="favCircleBox"><div class="skeleton" style="height:60px"></div></div>
+          </div>
+        </div>
+
+        <!-- 我的收藏帖 + 成就墙 / 邀请好友 -->
+        <div class="my-row">
+          <div class="panel">
+            <div class="panel-head">
+              <div class="panel-title"><span class="panel-ic rose">⭐</span><div>我的收藏帖 · 最近在看</div></div>
+            </div>
+            <div id="favPostBox"><div class="skeleton" style="height:60px"></div></div>
+          </div>
+          <div class="my-stack">
+            <div class="card" style="padding:18px 22px;background:linear-gradient(120deg,#ece9fd,#e6f4f9);border:0">
+              <div class="panel-head" style="margin-bottom:8px">
+                <div class="panel-title"><span class="panel-ic gold">🏆</span><div>我的成就墙</div></div>
+              </div>
+              <div class="flex" style="gap:12px;align-items:center;flex-wrap:wrap">
+                <p class="muted" style="font-size:12.5px;flex:1;min-width:120px">把徽章和成长数据生成一张朋友圈分享图</p>
+                <button class="btn btn-primary btn-sm" id="achShareBtn">📤 生成分享图</button>
+              </div>
+            </div>
+            <div class="card" style="padding:18px 22px;background:linear-gradient(120deg,#fff1e6,#fdeef4);border:0">
+              <div class="panel-head" style="margin-bottom:8px">
+                <div class="panel-title"><span class="panel-ic rose">🤝</span><div>邀请好友</div></div>
+              </div>
+              <p class="muted" style="font-size:12.5px;margin:0 0 10px">好友通过你的链接注册，一起解锁「引路人」「同行者」徽章</p>
+              <div class="flex" style="gap:8px">
+                <input class="input" id="inviteLink" readonly style="flex:1">
+                <button class="btn btn-primary btn-sm" id="copyInvite">复制</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 我的关注 + 账号与设置 -->
+        <div class="my-row">
+          <div class="panel">
+            <div class="panel-head">
+              <div class="panel-title"><span class="panel-ic green">❤️</span><div>我的关注</div></div>
+              <div class="panel-actions"><a class="btn btn-soft btn-sm" href="community.html?feed=following">关注动态 →</a></div>
+            </div>
+            <div id="myFollowing"><div class="skeleton" style="height:60px"></div></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head">
+              <div class="panel-title"><span class="panel-ic">⚙️</span><div>账号与设置</div></div>
+            </div>
+            <div class="settings-grid">
+              <button class="btn btn-ghost" id="editProfileBtn">✏️ 编辑个人资料</button>
+              <button class="btn btn-ghost" id="changePwdBtn">🔒 修改密码</button>
+              <button class="btn btn-ghost" id="exportBtn">📤 导出我的数据</button>
+              <button class="btn" id="logoutBtn2" style="background:var(--bg);color:var(--text-2)">🚪 退出登录</button>
+              <button class="btn span2" id="deleteAccountBtn" style="background:var(--rose-soft);color:#cf4266">🗑️ 注销账号</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 编辑资料 -->
+  <div class="modal-mask" id="profileModal">
+    <div class="modal">
+      <div class="modal-head"><h3>✏️ 完善个人资料</h3><button class="modal-close" data-close="profileModal">✕</button></div>
+      <div class="modal-body">
+        <div class="field"><label>昵称</label><input class="input" id="pfNick"></div>
+        <div class="grid grid-2" style="gap:14px">
+          <div class="field"><label>当前身份</label><select class="select" id="pfEdu">
+            <option value="高中">高中生</option><option value="大学">大学生</option><option value="职场新人">职场新人</option><option value="职场进阶">职场进阶</option><option value="转型期">转型期</option><option value="终身学习">终身学习</option>
+          </select></div>
+          <div class="field"><label>所在城市</label><input class="input" id="pfCity" placeholder="如：杭州"></div>
+        </div>
+        <div class="field"><label>我的目标方向</label><input class="input" id="pfTarget" placeholder="如：AI产品经理"></div>
+        <div class="field"><label>自我介绍</label><textarea class="textarea" id="pfBio"></textarea></div>
+        <button class="btn btn-primary btn-block btn-lg" id="pfSubmit">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 修改密码 -->
+  <div class="modal-mask" id="pwdModal">
+    <div class="modal">
+      <div class="modal-head"><h3>🔒 修改密码</h3><button class="modal-close" data-close="pwdModal">✕</button></div>
+      <div class="modal-body">
+        <div class="field"><label>当前密码</label><div class="pwd-wrap"><input class="input" id="pwdOld" type="password"><button type="button" class="pwd-toggle" data-pwd="pwdOld" aria-label="显示/隐藏密码">👁️</button></div></div>
+        <div class="field"><label>新密码（至少6位）</label><div class="pwd-wrap"><input class="input" id="pwdNew" type="password"><button type="button" class="pwd-toggle" data-pwd="pwdNew" aria-label="显示/隐藏密码">👁️</button></div></div>
+        <button class="btn btn-primary btn-block btn-lg" id="pwdSubmit">确认修改</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/my.js"></script>
+</body>
+</html>

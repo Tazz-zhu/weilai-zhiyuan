@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>升学档案 · 高考志愿推荐 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div class="section-head page-hero">
+        <div>
+          <span class="eyebrow">Gaokao advisor</span>
+          <div class="section-title">🎓 升学档案 · 高考志愿智能推荐</div>
+          <div class="section-sub">结合高考成绩、选科、性格测评、个人偏好与家庭情况，为你生成"冲稳保"志愿方案</div>
+        </div>
+      </div>
+
+      <div class="split-grid sg-profile">
+        <!-- 档案表单 -->
+        <div class="card" style="padding: 28px">
+          <div class="flex-between flex-wrap mb-16">
+            <h3 style="font-size:18px;color:var(--deep);font-weight:900">📋 我的升学档案</h3>
+            <span class="tag green" id="saveState">未保存</span>
+          </div>
+
+          <h4 class="form-sec">① 高考信息</h4>
+          <div class="grid grid-3" style="gap:12px">
+            <div class="field"><label>省份</label>
+              <select class="select" id="pfProvince">
+                <option value="">请选择</option>
+                <option>北京</option><option>天津</option><option>河北</option><option>山西</option><option>内蒙古</option>
+                <option>辽宁</option><option>吉林</option><option>黑龙江</option><option>上海</option><option>江苏</option>
+                <option>浙江</option><option>安徽</option><option>福建</option><option>江西</option><option>山东</option>
+                <option>河南</option><option>湖北</option><option>湖南</option><option>广东</option><option>广西</option>
+                <option>海南</option><option>重庆</option><option>四川</option><option>贵州</option><option>云南</option>
+                <option>西藏</option><option>陕西</option><option>甘肃</option><option>青海</option><option>宁夏</option>
+                <option>新疆</option>
+              </select></div>
+            <div class="field"><label>高考年份</label>
+              <select class="select" id="pfYear">
+                <option>2026</option><option>2025</option><option>2024</option><option>2023</option>
+              </select></div>
+            <div class="field"><label>高考分数</label><input class="input" id="pfScore" type="number" min="0" max="750" placeholder="如 598"></div>
+          </div>
+          <div class="grid grid-2" style="gap:12px">
+            <div class="field"><label>全省位次（选填）</label><input class="input" id="pfRank" type="number" placeholder="如 18000"></div>
+            <div class="field"><label>批次</label>
+              <select class="select" id="pfBatch">
+                <option>本科批</option><option>提前批</option><option>特殊类型批</option>
+              </select></div>
+          </div>
+          <div class="field">
+            <label>选科组合</label>
+            <div class="flex mb-8" style="gap:10px">
+              <button type="button" class="sel-chip physics" data-subj="物理">物理</button>
+              <button type="button" class="sel-chip" data-subj="历史">历史</button>
+            </div>
+            <div class="flex" style="gap:8px;flex-wrap:wrap">
+              <button type="button" class="sel-chip sub" data-subj="化学">化学</button>
+              <button type="button" class="sel-chip sub" data-subj="生物">生物</button>
+              <button type="button" class="sel-chip sub" data-subj="政治">政治</button>
+              <button type="button" class="sel-chip sub" data-subj="地理">地理</button>
+            </div>
+          </div>
+
+          <h4 class="form-sec">② 个人偏好</h4>
+          <div class="field">
+            <label>意向城市（可多选）</label>
+            <div class="chip-wrap" id="cityChips"></div>
+          </div>
+          <div class="field">
+            <label>院校类型（可多选）</label>
+            <div class="chip-wrap" id="typeChips"></div>
+          </div>
+          <div class="field">
+            <label>专业意向（可多选，推荐会更精准）</label>
+            <div class="chip-wrap" id="majorChips"></div>
+          </div>
+          <div class="field">
+            <label>就业导向</label>
+            <div class="chip-wrap" id="goalChips"></div>
+          </div>
+
+          <h4 class="form-sec">③ 家庭情况</h4>
+          <div class="grid grid-2" style="gap:12px">
+            <div class="field"><label>家庭年收入</label>
+              <select class="select" id="pfFinance">
+                <option value="">请选择</option><option value="low">10 万以下</option>
+                <option value="mid">10-30 万</option><option value="high">30-80 万</option>
+                <option value="top">80 万以上</option>
+              </select></div>
+            <div class="field"><label>是否优先低学费/公费</label>
+              <select class="select" id="pfStability">
+                <option value="">请选择</option><option value="yes">是，优先公费师范/低学费</option>
+                <option value="no">否，学费不是主要考虑</option>
+              </select></div>
+          </div>
+          <div class="grid grid-2" style="gap:12px">
+            <div class="field"><label>父母职业（选填）</label>
+              <select class="select" id="pfParent">
+                <option value="">请选择</option><option>教师</option><option>医生</option><option>工程师</option>
+                <option>经商</option><option>公务员</option><option>务农</option><option>军人</option><option>其他</option>
+              </select></div>
+            <div class="field"><label>家庭期望（可多选）</label>
+              <div class="chip-wrap" id="expectChips"></div>
+            </div>
+          </div>
+
+          <div class="flex mt-16" style="gap:12px;flex-wrap:wrap">
+            <button class="btn btn-deep" id="saveProfileBtn">💾 保存档案</button>
+            <button class="btn btn-primary btn-shine" id="recommendBtn">🎯 立即智能推荐</button>
+          </div>
+          <p class="form-hint mt-8">保存后，推荐将融合你的四维测评性格画像（若已测评）。参考分数线为演示数据，仅供体验。</p>
+        </div>
+
+        <!-- 推荐结果 -->
+        <div id="resultPanel">
+          <div class="card" style="padding:40px;text-align:center;min-height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <div style="font-size:52px;margin-bottom:14px">🎯</div>
+            <h3 style="font-size:20px;color:var(--deep);font-weight:900">等待生成你的志愿方案</h3>
+            <p class="text-2" style="max-width:340px;margin:10px 0 18px">填写左侧档案并点击"立即智能推荐"，系统将结合 分数 + 选科 + 性格 + 偏好 + 家庭 五个维度，输出冲/稳/保三档院校建议。</p>
+            <div class="flex" style="gap:10px;flex-wrap:wrap;justify-content:center">
+              <span class="tag orange">冲 · 搏一搏</span>
+              <span class="tag gold">稳 · 大概率</span>
+              <span class="tag green">保 · 兜底</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>搜索 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container" style="max-width:900px">
+      <div class="section-head page-hero">
+        <div>
+          <span class="eyebrow">Search</span>
+          <div class="section-title">🔍 全局搜索</div>
+          <div class="section-sub">一次搜索，职业 / 专业 / 圈子 / 帖子 / 剧本 全找到</div>
+        </div>
+      </div>
+      <div class="flex mb-16" style="gap:10px">
+        <input class="input" id="searchInput" placeholder="输入关键词，如：律师、产品、AI…" style="flex:1;max-width:520px">
+        <button class="btn btn-deep" id="searchBtn">搜索</button>
+      </div>
+      <div id="resultBox">
+        <div class="card empty"><div class="ic">🔍</div><h4>输入关键词开始搜索</h4><p>试试：律师、产品、人工智能、临床医学…</p><div class="empty-action"><a class="btn btn-soft btn-sm" href="index.html">🏠 回首页看看</a></div></div>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="js/search.js"></script>
+</body>
+</html>

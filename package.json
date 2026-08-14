@@ -1,0 +1,13 @@
+{
+  "name": "weilai-zhiyuan",
+  "version": "2.0.0",
+  "description": "未来致远 · 职业认知启蒙 + 生涯规划陪伴 + 人生努力记录（三位一体成长平台）",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}

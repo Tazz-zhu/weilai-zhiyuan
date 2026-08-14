@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人生回忆录 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <!-- 人生档案封面 -->
+      <div id="memoirHero" style="border-radius:26px;padding:40px;color:#fff;position:relative;overflow:hidden;margin-bottom:22px;background:linear-gradient(135deg,#1a2440,#33446f 60%,#4a3f66)">
+        <div style="position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,140,66,.4),transparent 65%)"></div>
+        <div style="position:absolute;left:-40px;bottom:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(74,163,194,.3),transparent 65%)"></div>
+        <div class="skeleton" style="height:120px;border-radius:16px"></div>
+      </div>
+
+      <!-- 核心入口三卡 -->
+      <div class="grid grid-3 mb-16" id="memoirCards"></div>
+
+      <!-- 最近足迹 + 即将开启的胶囊 -->
+      <div class="split-grid sg-wide">
+        <div class="card panel">
+          <div class="panel-head">
+            <div class="panel-title"><span class="panel-ic">👣</span><div>最近足迹<small>Footprints</small></div></div>
+            <div class="panel-actions"><a class="btn btn-soft btn-sm" href="timeline.html">查看完整时光轴 →</a></div>
+          </div>
+          <div id="recentFootprints"><div class="skeleton" style="height:160px"></div></div>
+        </div>
+        <div class="card panel">
+          <div class="panel-head">
+            <div class="panel-title"><span class="panel-ic gold">⏳</span><div>时光胶囊<small>Time capsule</small></div></div>
+            <div class="panel-actions"><a class="btn btn-soft btn-sm" href="capsules.html">管理胶囊 →</a></div>
+          </div>
+          <div id="capsulePreview"><div class="skeleton" style="height:160px"></div></div>
+        </div>
+      </div>
+
+      <!-- 里程碑纪念卡 -->
+      <div class="panel mb-16">
+        <div class="panel-head">
+          <div class="panel-title"><span class="panel-ic purple">🏁</span><div>我的成长里程碑<small>Milestones</small></div></div>
+        </div>
+        <div id="milestoneBox"></div>
+      </div>
+
+      <!-- 我的人生目标 -->
+      <div class="panel mb-16">
+        <div class="panel-head">
+          <div class="panel-title"><span class="panel-ic rose">🎯</span><div>我的人生目标<small>Goals</small></div></div>
+          <div class="panel-actions"><button class="btn btn-primary btn-sm" id="addGoalBtn">＋ 设定目标</button></div>
+        </div>
+        <div id="goalBox"></div>
+      </div>
+
+      <!-- 本周成长小结 -->
+      <div class="panel mb-16">
+        <div class="panel-head">
+          <div class="panel-title"><span class="panel-ic green">📅</span><div>本周成长小结<small>Weekly</small></div></div>
+          <div class="panel-actions"><button class="btn btn-primary btn-sm" id="weeklyShareBtn">📤 生成分享图</button></div>
+        </div>
+        <div id="weeklyBox"></div>
+      </div>
+
+      <!-- 月度足迹热力 -->
+      <div class="panel mt-16">
+        <div class="panel-head">
+          <div class="panel-title"><span class="panel-ic blue">🗓️</span><div>足迹热力图（近 12 个月）<small>Calendar</small></div></div>
+          <div class="panel-actions"><a class="btn btn-soft btn-sm" href="report.html">📊 年度人生报告</a></div>
+        </div>
+        <div id="heatmap"><div class="skeleton" style="height:90px"></div></div>
+      </div>
+
+      <div class="text-center mt-24">
+        <button class="btn btn-primary btn-lg btn-shine" id="quickAddBtn">📝 记录此刻，留下足迹</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- 目标设定 -->
+  <div class="modal-mask" id="goalModal">
+    <div class="modal">
+      <div class="modal-head"><h3>🎯 设定一个人生目标</h3><button class="modal-close" data-close="goalModal">✕</button></div>
+      <div class="modal-body">
+        <div class="field"><label>目标名称</label><input class="input" id="gTitle" placeholder="如：秋招拿到产品经理 offer"></div>
+        <div class="field"><label>描述（选填）</label><textarea class="textarea" id="gDesc" placeholder="为什么想达成这个目标？"></textarea></div>
+        <div class="field"><label>截止日期（选填）</label><input class="input" id="gDeadline" type="date"></div>
+        <div class="field"><label>里程碑（每行一个，建议 3-5 个）</label><textarea class="textarea" id="gMiles" style="min-height:110px" placeholder="例如：&#10;完成简历与作品集&#10;投递 30 家目标公司&#10;通过 5 轮面试"></textarea></div>
+        <button class="btn btn-primary btn-block btn-lg" id="gSubmit">创建目标</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 快速记录 -->
+  <div class="modal-mask" id="quickModal">
+    <div class="modal">
+      <div class="modal-head"><h3>📝 记录一件人生大事</h3><button class="modal-close" data-close="quickModal">✕</button></div>
+      <div class="modal-body">
+        <div class="field"><label>事件名称</label><input class="input" id="qTitle" placeholder="如：拿到第一份实习offer"></div>
+        <div class="grid grid-2" style="gap:14px">
+          <div class="field"><label>日期</label><input class="input" id="qDate" type="date"></div>
+          <div class="field"><label>类型</label>
+            <select class="select" id="qType">
+              <option>学习</option><option>实习</option><option>获奖</option><option>跳槽</option><option>创业</option><option>旅行</option><option>其他</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>详细记录（选填）</label><textarea class="textarea" id="qDesc" placeholder="当时发生了什么？你的感受是什么？"></textarea></div>
+        <button class="btn btn-primary btn-block btn-lg" id="qSubmit">记 录</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/memoir.js"></script>
+</body>
+</html>

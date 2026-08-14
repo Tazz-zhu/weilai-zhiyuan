@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年度人生报告 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container" style="max-width:860px">
+      <div class="section-head page-hero">
+        <div>
+          <div class="section-title">📊 年度人生白皮书</div>
+          <div class="section-sub">AI 自动生成你的年度人生总结报告</div>
+        </div>
+        <div class="flex">
+          <select class="select" id="yearSel" style="width:120px"></select>
+          <button class="btn btn-primary btn-sm" id="genBtn">生成报告</button>
+        </div>
+      </div>
+      <div id="reportBox"><div class="skeleton" style="height:320px;border-radius:24px"></div></div>
+    </div>
+  </main>
+  <script type="module" src="js/report.js"></script>
+</body>
+</html>

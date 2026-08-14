@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>未来致远 · 分享卡3 产品</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body {
+      width: 1080px; height: 1350px; overflow: hidden;
+      font-family: var(--font); color: var(--text);
+      background:
+        radial-gradient(720px 420px at 92% -6%, rgba(255,140,66,.1), transparent 60%),
+        radial-gradient(720px 420px at -6% 108%, rgba(74,163,194,.1), transparent 60%),
+        #f7f4ef;
+      position: relative;
+    }
+    .wrap { padding: 48px 60px 0; height: 1350px; box-sizing: border-box; display: flex; flex-direction: column; }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand-logo { width: 52px; height: 52px; border-radius: 16px; font-size: 27px; }
+    .brand-name { font-size: 27px; font-weight: 900; color: var(--deep); letter-spacing: 2px; }
+    .head { margin-top: 32px; text-align: center; }
+    .head h1 { font-size: 46px; font-weight: 900; color: var(--deep); margin: 0; letter-spacing: 2px; }
+    .head .hl { background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .head p { margin-top: 10px; font-size: 20px; color: var(--text-2); letter-spacing: 2px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; height: 640px; }
+    .cell { position: relative; border-radius: 22px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--line); }
+    .cell img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 0; }
+    .cell .tag {
+      position: absolute; left: 12px; top: 12px; font-size: 15px; font-weight: 800; color: #fff;
+      background: rgba(26,36,64,.82); backdrop-filter: blur(6px); padding: 8px 18px; border-radius: 100px;
+    }
+    .cta { margin-top: 26px; padding: 20px 26px; border-radius: 22px; background: var(--grad-deep); color: #fff; text-align: center; }
+    .cta b { font-size: 24px; letter-spacing: 2px; }
+    .cta div { margin-top: 6px; font-size: 13px; white-space: nowrap; color: rgba(255,255,255,.7); letter-spacing: 1px; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <span class="brand-logo">🌅</span>
+      <span class="brand-name">未来致远<small>你的人生，自己导航</small></span>
+    </div>
+    <div class="head">
+      <h1>同学都在用的 <span class="hl">成长平台</span></h1>
+      <p>选专业 · 填志愿 · 找方向 · 记成长，一站搞定</p>
+    </div>
+    <div class="grid">
+      <div class="cell"><img src="/share/shot-careers.png" alt="职业认知馆"><span class="tag">👀 行业 × 职业库</span></div>
+      <div class="cell"><img src="/share/shot-planner.png" alt="生涯规划"><span class="tag">🧭 AI 生涯规划</span></div>
+      <div class="cell"><img src="/share/shot-profile.png" alt="升学志愿"><span class="tag">🎓 高考志愿推荐</span></div>
+      <div class="cell"><img src="/share/shot-circle.png" alt="律师圈子"><span class="tag">💬 职业圈子</span></div>
+    </div>
+    <div class="cta">
+      <b>注册即用 · 全功能免费开放</b>
+      <div>🔗 https://consumers-devices-sporting-deal.trycloudflare.com</div>
+    </div>
+  </div>
+</body>
+</html>

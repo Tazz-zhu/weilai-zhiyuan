@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理后台 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body class="admin-body">
+  <!-- 登录 -->
+  <div id="adminLogin" class="hidden" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px">
+    <div class="card" style="max-width:400px;width:100%;padding:36px">
+      <div class="text-center mb-16">
+        <div class="brand-logo" style="margin:0 auto 14px;width:52px;height:52px;font-size:26px">🛡️</div>
+        <h2 style="color:var(--deep);font-weight:900">未来致远 · 管理后台</h2>
+        <p class="muted">请使用管理员账号登录</p>
+      </div>
+      <div class="field"><label>用户名</label><input class="input" id="admUser" placeholder="admin"></div>
+      <div class="field"><label>密码</label><div class="pwd-wrap"><input class="input" id="admPass" type="password" placeholder="••••••••"><button type="button" class="pwd-toggle" data-pwd="admPass" aria-label="显示/隐藏密码">👁️</button></div></div>
+      <button class="btn btn-primary btn-block btn-lg" id="admLoginBtn">登 录</button>
+      <p class="form-hint text-center mt-8">演示管理员：admin / admin123</p>
+    </div>
+  </div>
+
+  <!-- 后台主体 -->
+  <div id="adminApp" class="admin-app hidden">
+    <aside class="admin-side">
+      <div class="admin-brand"><span class="brand-logo">🌅</span><div><b>未来致远</b><small>管理后台</small></div></div>
+      <nav class="admin-nav">
+        <button class="admin-nav-item active" data-view="dashboard">📊 仪表盘</button>
+        <button class="admin-nav-item" data-view="users">👥 用户管理</button>
+        <button class="admin-nav-item" data-view="posts">💬 帖子管理</button>
+        <button class="admin-nav-item" data-view="comments">✉️ 评论管理</button>
+        <button class="admin-nav-item" data-view="reports">🚩 举报管理</button>
+        <button class="admin-nav-item" data-view="content">📝 内容管理</button>
+      </nav>
+      <div class="admin-side-foot">
+        <a class="btn btn-ghost btn-sm btn-block" href="index.html">← 返回前台</a>
+        <button class="btn btn-soft btn-sm btn-block mt-8" id="admLogoutBtn">退出登录</button>
+      </div>
+    </aside>
+    <main class="admin-main">
+      <div class="admin-top">
+        <h1 id="viewTitle">📊 仪表盘</h1>
+        <span class="muted" id="admWho"></span>
+      </div>
+      <div id="viewContent"></div>
+    </main>
+  </div>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

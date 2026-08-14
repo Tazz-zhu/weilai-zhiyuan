@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>导师咨询 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div class="section-head page-hero">
+        <div>
+          <div class="section-title">🧑‍🏫 行业导师库</div>
+          <div class="section-sub">各领域从业者 1v1 咨询，让过来人帮你少走弯路</div>
+        </div>
+        <div class="flex">
+          <input class="input" id="searchInput" placeholder="🔍 搜索导师 / 领域…" style="width:240px">
+        </div>
+      </div>
+      <div class="grid grid-3" id="mentorGrid"></div>
+    </div>
+  </main>
+  <div class="modal-mask" id="bookModal">
+    <div class="modal">
+      <div class="modal-head"><h3>📅 预约咨询</h3><button class="modal-close" data-close="bookModal">✕</button></div>
+      <div class="modal-body" id="bookBody"></div>
+    </div>
+  </div>
+  <script type="module" src="js/mentors.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>时光胶囊 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div class="section-head page-hero">
+        <div>
+          <div class="section-title">⏳ 时光胶囊</div>
+          <div class="section-sub">给未来的自己写信，设定开启时间——18岁的你 → 25岁的你 → 35岁的你</div>
+        </div>
+        <button class="btn btn-primary btn-sm" id="newCapsuleBtn">💌 埋下一颗胶囊</button>
+      </div>
+      <div id="capsuleGrid" class="grid grid-3"></div>
+    </div>
+  </main>
+  <div class="modal-mask" id="capsuleModal">
+    <div class="modal">
+      <div class="modal-head"><h3>💌 写给未来的信</h3><button class="modal-close" data-close="capsuleModal">✕</button></div>
+      <div class="modal-body" id="capsuleBody"></div>
+    </div>
+  </div>
+  <div class="modal-mask" id="openModal">
+    <div class="modal">
+      <div class="modal-head"><h3>💌 时光胶囊已开启</h3><button class="modal-close" data-close="openModal">✕</button></div>
+      <div class="modal-body" id="openBody"></div>
+    </div>
+  </div>
+  <script type="module" src="js/capsules.js"></script>
+</body>
+</html>

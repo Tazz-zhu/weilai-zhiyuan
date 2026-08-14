@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成长时光轴 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div class="section-head page-hero">
+        <div>
+          <div class="section-title">📖 成长时光轴</div>
+          <div class="section-sub">记录你的每一步：学习、实习、获奖、跳槽、创业……每一份努力都算数</div>
+        </div>
+        <div class="flex" style="gap:10px">
+          <a class="btn btn-soft btn-sm" href="report.html">📊 年度人生报告</a>
+          <button class="btn btn-primary btn-sm" id="addEventBtn">＋ 记录一件大事</button>
+        </div>
+      </div>
+      <div class="split-grid sg-main">
+        <div id="timelineBox">
+          <div class="skeleton" style="height:300px;border-radius:20px"></div>
+        </div>
+        <div>
+          <div class="panel">
+            <div class="panel-head">
+              <div class="panel-title"><span class="panel-ic gold">💡</span><div>记录小贴士</div></div>
+            </div>
+            <p class="text-2" style="font-size:13.5px;margin-bottom:10px">• 关键节点都值得记录：考试、实习、获奖、转折</p>
+            <p class="text-2" style="font-size:13.5px;margin-bottom:10px">• 每一条记录都会转化为你的"经验值"与"成长速度"</p>
+            <p class="text-2" style="font-size:13.5px;margin-bottom:10px">• 年度结束时，AI 会为你生成专属《年度人生白皮书》</p>
+            <p class="text-2" style="font-size:13.5px">• 记录不是为了打卡，而是为了看见自己的轨迹</p>
+          </div>
+          <div class="panel mt-16">
+            <div class="panel-head">
+              <div class="panel-title"><span class="panel-ic blue">📊</span><div>我的记录概览</div></div>
+            </div>
+            <div id="miniStats"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="modal-mask" id="eventModal">
+    <div class="modal">
+      <div class="modal-head"><h3>📝 记录一件人生大事</h3><button class="modal-close" data-close="eventModal">✕</button></div>
+      <div class="modal-body">
+        <div class="field"><label>事件名称</label><input class="input" id="evTitle" placeholder="如：拿到第一份实习offer"></div>
+        <div class="grid grid-2" style="gap:14px">
+          <div class="field"><label>日期</label><input class="input" id="evDate" type="date"></div>
+          <div class="field"><label>类型</label>
+            <select class="select" id="evType">
+              <option>学习</option><option>实习</option><option>获奖</option><option>跳槽</option><option>创业</option><option>旅行</option><option>其他</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>详细记录（选填）</label><textarea class="textarea" id="evDesc" placeholder="当时发生了什么？你的感受是什么？"></textarea></div>
+        <div class="field"><label>关联人生目标（选填）</label><select class="select" id="evGoal"><option value="">不关联</option></select></div>
+        <button class="btn btn-primary btn-block btn-lg" id="evSubmit">记 录</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/timeline.js"></script>
+</body>
+</html>

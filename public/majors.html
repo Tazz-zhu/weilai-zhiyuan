@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>专业真相馆 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div class="section-head page-hero">
+        <div>
+          <div class="section-title">🎓 专业真相馆</div>
+          <div class="section-sub">每个专业的"真心话"：学什么、毕业去哪、跨专业就业地图</div>
+        </div>
+        <div class="flex">
+          <input class="input" id="searchInput" placeholder="🔍 搜索专业…" style="width:240px">
+        </div>
+      </div>
+      <div class="tab-bar" id="catBar"><button class="tab-btn active" data-cat="">全部</button></div>
+      <div class="grid grid-3" id="majorGrid"></div>
+      <div class="empty hidden" id="emptyBox"><div class="ic">🔍</div><h4>没有找到相关专业</h4></div>
+    </div>
+  </main>
+  <div class="modal-mask" id="majorModal">
+    <div class="modal wide">
+      <div class="modal-head"><h3>🎓 专业真相</h3><button class="modal-close" data-close="majorModal">✕</button></div>
+      <div class="modal-body" id="majorBody"></div>
+    </div>
+  </div>
+  <script type="module" src="js/majors.js"></script>
+</body>
+</html>

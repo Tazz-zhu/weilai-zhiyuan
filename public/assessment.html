@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>四维深度测评 · 未来致远</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌅</text></svg>">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div id="quizBox" class="hidden">
+        <div class="quiz-dim" id="dimBar"></div>
+        <div class="quiz-card">
+          <div class="quiz-progress"><div class="qp-fill" id="qProgress"></div></div>
+          <div id="qArea"></div>
+          <div class="flex-between mt-24">
+            <button class="btn btn-ghost" id="prevBtn">← 上一题</button>
+            <span class="muted" id="qCount"></span>
+            <button class="btn btn-primary" id="nextBtn">下一题 →</button>
+          </div>
+        </div>
+      </div>
+      <div id="startBox" class="quiz-card text-center" style="max-width:680px;margin:0 auto">
+        <div class="result-hero">
+          <div class="rh-ic">🧭</div>
+          <h2>四维深度测评</h2>
+          <p class="text-2" style="max-width:520px;margin:10px auto 6px">兴趣 · 性格 · 能力 · 价值观，26 道题，约 5 分钟。基于你的画像推荐 3-5 条最适合的职业路径。</p>
+        </div>
+        <div class="grid grid-2 mt-24" id="dimIntro"></div>
+        <button class="btn btn-primary btn-lg mt-24" id="startBtn">开始测评</button>
+        <p class="form-hint mt-8">测评结果仅供参考，不是标准答案——未来致远不贩卖焦虑，只给参考。</p>
+      </div>
+      <div id="resultBox" class="hidden"></div>
+    </div>
+  </main>
+  <script type="module" src="js/assessment.js"></script>
+</body>
+</html>
